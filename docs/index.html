@@ -5,16 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
     <title>家計簿アプリ</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSSを直接追加 */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="date"]::before {
+            content: attr(placeholder); /* プレースホルダーを表示 */
+            color: #888;
+        }
+        input:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 12px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>家計簿アプリ</h1>
     <form id="expenseForm">
-        <input type="date" id="date" placeholder="日付" required>
+        <label for="date">日付</label>
+        <input type="date" id="date" placeholder="日付を選択" required>
+        
+        <label for="category">項目</label>
         <select id="category"></select>
-        <input type="text" id="location" placeholder="場所">
-        <input type="tel" inputmode="tel" id="amount" pattern="[0-9]*" title="数字のみを入力してください。" placeholder="金額" required>
+        
+        <label for="location">場所</label>
+        <input type="text" id="location" placeholder="場所を入力">
+        
+        <label for="amount">金額</label>
+        <input type="tel" inputmode="tel" id="amount" pattern="[0-9]*" title="数字のみを入力してください。" placeholder="金額を入力" required>
+        
+        <label for="payment">支払い方法</label>
         <select id="payment"></select>
-        <input type="text" id="note" placeholder="備考">
+        
+        <label for="note">備考</label>
+        <input type="text" id="note" placeholder="備考を入力">
+        
         <button type="submit">追加</button>
     </form>
     <script src="script.js"></script>
