@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("expenseForm").addEventListener("submit", async (e) => {
         e.preventDefault();
     
+        // 入力された日付を取得して、スラッシュ形式に変更
+        const rawDate = document.getElementById("date").value; // YYYY-MM-DD形式
+        const formattedDate = rawDate.replace(/-/g, "/"); // YYYY/MM/DD形式に変換
+    
         const data = {
-            date: document.getElementById("date").value,
+            date: formattedDate, // 変換後の日付
             category: document.getElementById("category").value,
             location: document.getElementById("location").value,
             amount: document.getElementById("amount").value,
@@ -38,7 +42,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch(sheetUrl, {
             method: "POST",
             mode: "no-cors",
-            // headers: { "Content-Type": "application/json" }, // 必ずJSONを指定
             headers: { "Content-Type": "text/plain" }, // 必ずJSONを指定
             body: JSON.stringify(data)
         });
