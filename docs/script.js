@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch(sheetUrl, {
             method: "POST",
             mode: "no-cors",
-            headers: { "Content-Type": "application/json" }, // 必ずJSONを指定
+            // headers: { "Content-Type": "application/json" }, // 必ずJSONを指定
+            headers: { "Content-Type": "text/plain" }, // 必ずJSONを指定
             body: JSON.stringify(data)
         });
     
