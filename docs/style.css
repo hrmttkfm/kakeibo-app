@@ -1,24 +1,7 @@
-/* body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
-}
-
-input, select, button {
-    margin: 5px;
-    padding: 8px;
-} */
-/* CSSを直接追加 */
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px; /* フォントを大きくする */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
@@ -26,7 +9,14 @@ body {
 h1 {
     text-align: center;
     margin: 20px 0;
-    font-size: 24px;
+    font-size: 26px; /* 見出しのフォントサイズを調整 */
+}
+h1 a {
+    text-decoration: none;
+    color: #007BFF;
+}
+h1 a:hover {
+    text-decoration: underline;
 }
 form {
     max-width: 400px;
@@ -39,27 +29,20 @@ form {
 input, select, button {
     width: 100%;
     font-size: 16px;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-input[type="date"]::before {
-    content: attr(placeholder); /* プレースホルダーを表示 */
-    color: #888;
-}
-input:focus, select:focus {
-    border-color: #007BFF;
-    outline: none;
-}
 button {
     background-color: #007BFF;
-    color: #fff;
-    border: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
+    border: none;
     cursor: pointer;
-    padding: 12px;
+    padding: 14px;
 }
 button:hover {
     background-color: #0056b3;
