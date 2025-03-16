@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 入力された日付を取得して、スラッシュ形式に変更
         const rawDate = document.getElementById("date").value; // YYYY-MM-DD形式
         const formattedDate = rawDate.replace(/-/g, "/"); // YYYY/MM/DD形式に変換
+        console.log(formattedDate)
     
         const data = {
             date: formattedDate, // 変換後の日付
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch(sheetUrl, {
             method: "POST",
             mode: "no-cors",
-            headers: { "Content-Type": "text/plain" }, // 必ずJSONを指定
+            headers: { "Content-Type": "text/plain" }, // text/plainにしないとcorsのエラーが出る
             body: JSON.stringify(data)
         });
     
