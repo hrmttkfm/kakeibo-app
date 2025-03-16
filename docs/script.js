@@ -1,4 +1,4 @@
-const sheetUrl = "https://script.google.com/macros/s/xxxxxxxxxxx/exec"; // Google Apps ScriptのURL
+const sheetUrl = "https://script.google.com/macros/s/AKfycbz6qrpLAYHLrtVGqKiKV60Kfh3AV56EDrTlCuxJJJ0HRLDVBzUEaJ8zbcR3oSpfxi3JFw/exec"; // Google Apps ScriptのURL、デプロイを管理からURLを拾ってくる
 
 document.addEventListener("DOMContentLoaded", async () => {
     const categories = ["食品", "遊興", "医療", "インターネット", "ガス", "電気", "水道", "生活", "学習"]; // 本来はAPIで取得
