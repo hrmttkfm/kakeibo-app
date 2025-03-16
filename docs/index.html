@@ -12,7 +12,7 @@
         <input type="date" id="date"placeholder="日付" required >
         <select id="category"></select>
         <input type="text" id="location" placeholder="場所">
-        <input type="tel" id="amount" placeholder="金額" required>
+        <input type="tel" id="amount" pattern="\d*" title="数字のみを入力してください。" placeholder="金額" required>
         <select id="payment"></select>
         <input type="text" id="note" placeholder="備考">
         <button type="submit">追加</button>
