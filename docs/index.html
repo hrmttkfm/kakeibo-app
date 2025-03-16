@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計簿アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>家計簿アプリ</h1>
+    <form id="expenseForm">
+        <input type="date" id="date" required>
+        <select id="category"></select>
+        <input type="text" id="location" placeholder="場所">
+        <input type="number" id="amount" placeholder="金額" required>
+        <select id="payment"></select>
+        <input type="text" id="note" placeholder="備考">
+        <button type="submit">追加</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
