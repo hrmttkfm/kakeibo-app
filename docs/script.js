@@ -1,4 +1,4 @@
-const sheetUrl = "https://script.google.com/macros/s/AKfycbz6qrpLAYHLrtVGqKiKV60Kfh3AV56EDrTlCuxJJJ0HRLDVBzUEaJ8zbcR3oSpfxi3JFw/exec"; // Google Apps ScriptのURL、デプロイを管理からURLを拾ってくる
+const sheetUrl = "https://script.google.com/macros/s/AKfycbz6qrpLAYHLrtVGqKiKV60Kfh3AV56EDrTlCuxJJJ0HRLDVBzUEaJ8zbcR3oSpfxi3JFw/exec"; // Google Apps ScriptのURL
 
 document.addEventListener("DOMContentLoaded", async () => {
     const categories = ["食品", "遊興", "医療", "インターネット", "ガス", "電気", "水道", "生活", "学習"]; // 本来はAPIで取得
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 入力された日付を取得して、スラッシュ形式に変更
         const rawDate = document.getElementById("date").value; // YYYY-MM-DD形式
         const formattedDate = rawDate.replace(/-/g, "/"); // YYYY/MM/DD形式に変換
-        console.log(formattedDate)
+        console.log(formattedDate);
     
         const data = {
             date: formattedDate, // 変換後の日付
