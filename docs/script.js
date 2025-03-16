@@ -1,8 +1,8 @@
 const sheetUrl = "https://script.google.com/macros/s/xxxxxxxxxxx/exec"; // Google Apps ScriptのURL
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const categories = ["食費", "交通費", "光熱費"]; // 本来はAPIで取得
-    const payments = ["現金", "クレジット", "電子マネー"];
+    const categories = ["食品", "遊興", "医療", "インターネット", "ガス", "電気", "水道", "生活", "学習"]; // 本来はAPIで取得
+    const payments = ["現金", "楽天VISA", "楽天Pay", "楽天JCB", "PayPay", "Suica", "イオンVISA", "ゆうちょ", "楽天銀行", "JACCS"];
 
     const categorySelect = document.getElementById("category");
     const paymentSelect = document.getElementById("payment");
