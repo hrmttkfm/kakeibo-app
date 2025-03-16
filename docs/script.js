@@ -23,22 +23,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("expenseForm").addEventListener("submit", async (e) => {
         e.preventDefault();
-        
+    
         const data = {
             date: document.getElementById("date").value,
-            category: categorySelect.value,
+            category: document.getElementById("category").value,
             location: document.getElementById("location").value,
             amount: document.getElementById("amount").value,
-            payment: paymentSelect.value,
+            payment: document.getElementById("payment").value,
             note: document.getElementById("note").value
         };
-
-        await fetch(sheetUrl, {
+    
+        console.log("送信データ:", data); // 送信前にデータを確認
+    
+        const response = await fetch(sheetUrl, {
             method: "POST",
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" }, // 必ずJSONを指定
+            body: JSON.stringify(data)
         });
-
-        alert("データを送信しました");
+    
+        const result = await response.text();
+        console.log("サーバーの応答:", result); // サーバーからのレスポンスを確認
+    
+        alert("データを送信しました: " + result);
     });
 });
