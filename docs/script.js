@@ -1,7 +1,7 @@
 const sheetUrl = "https://script.google.com/macros/s/AKfycbz6qrpLAYHLrtVGqKiKV60Kfh3AV56EDrTlCuxJJJ0HRLDVBzUEaJ8zbcR3oSpfxi3JFw/exec"; // Google Apps ScriptのURL
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const categories = ["食品", "遊興", "医療", "インターネット", "ガス", "電気", "水道", "生活", "学習"]; // 本来はAPIで取得
+    const categories = ["食費", "日用品費", "水道光熱費", "住宅費", "娯楽費", "交通費", "特別費", "税金", "保険料", "被服費", "交際費", "その他", "雑費"]; // 本来はAPIで取得
     const payments = ["現金", "楽天VISA", "楽天Pay", "楽天JCB", "PayPay", "Suica", "イオンVISA", "ゆうちょ", "楽天銀行", "JACCS"];
 
     const categorySelect = document.getElementById("category");
